@@ -1,0 +1,59 @@
+﻿<Window x:Class="File_Organizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:File_Organizer"
+        mc:Ignorable="d"
+        Title="File Organizer" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Выберите каталог:" 
+                   FontWeight="Bold" Margin="0,0,0,5"/>
+        <Button Grid.Row="0" Grid.Column="1" Content="Выбрать каталог" 
+                Click="SelectFolder_Click" Width="120" Margin="5,0,0,5"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+               x:Name="FolderPathLabel" Content="Путь не выбран" 
+               Background="#FFF0F0F0" BorderThickness="1" BorderBrush="Gray" 
+               Padding="8,4" Margin="0,0,0,10"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Выберите файл:" 
+                   FontWeight="Bold" Margin="0,0,0,5"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="Выбрать файл" 
+                Click="SelectFile_Click" Width="120" Margin="5,0,0,5"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+                    Orientation="Horizontal" Margin="0,0,0,15">
+            <TextBlock Text="Выбранный файл: " FontWeight="SemiBold"/>
+            <TextBlock x:Name="FileNameTextBlock" Text="Файл не выбран" 
+                      FontStyle="Italic" Foreground="Blue"/>
+        </StackPanel>
+
+        <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                BorderBrush="LightGray" BorderThickness="1" 
+                Background="White" Margin="0,0,0,15">
+            <TextBlock x:Name="PreviewTextBlock" Text="Здесь будет отображаться информация о выбранных файлах..." 
+                      HorizontalAlignment="Center" VerticalAlignment="Center" 
+                      TextAlignment="Center" Foreground="Gray" TextWrapping="Wrap"/>
+        </Border>
+
+        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" 
+                Content="Сохранить файл..." Click="SaveFile_Click" 
+                Width="150" Height="30" FontWeight="Bold" 
+                Background="#FF0078D7" Foreground="White"/>
+    </Grid>
+</Window>
