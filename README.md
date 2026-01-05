@@ -1,1 +1,27 @@
-This ridiculously simple program, as it turned out, was needed by some people at my workplace who don't know how to handle files and their extensions. So, this "marvel" was created. Basically, if someone who doesn't have a clue wants to change a file extension, they take the path, then the file itself, then select a new extension, and save it. Don't ask who it's for – such people actually exist!
+# File Organizer
+
+Desktop utility for file management and extension handling.
+
+## Features
+- Automatic file sorting by type
+- File extension changing
+- Batch processing support
+- WPF user interface
+
+## Quick Start
+1. Download FileOrganizer.exe
+2. Select folder to organize
+3. Choose operation (sort or rename)
+4. Click "Process"
+
+## Tech Stack
+- Platform: .NET Framework
+- Language: C#
+- UI: WPF
+
+## Use Cases
+- Office document organization
+- Media file sorting
+- Batch file renaming
+- File management automation
+
